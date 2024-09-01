@@ -1,17 +1,19 @@
 import java.util.*;
+
 public class SameNumber {
     public static void main(String[] args) {
         int[] arr = {1, 1, 3, 3, 0, 1, 1};
-        int[] answer = solve(arr);
+        ArrayList<Integer> answer = solve(arr);
+        System.out.println(answer);
     }
 
-    // 문제 풀이 로직을 여기에 작성
-    public static int[] solve(int[] arr) {
-
-        for(int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+    public static ArrayList<Integer> solve(int[] arr) {
+        ArrayList<Integer> answerList = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (answerList.isEmpty() || answerList.get(answerList.size() - 1) != arr[i]) {
+                answerList.add(arr[i]);
+            }
         }
-        int[] answer = {0};
-        return answer;
+        return answerList;
     }
 }
