@@ -4,4 +4,4 @@
 - [x] [같은 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12906)
 - [x] [숫자 배열](https://school.programmers.co.kr/learn/courses/30/lessons/12910)
 - [x] [가운데글자](https://school.programmers.co.kr/learn/courses/30/lessons/12903)
-- [ ] [2016년](https://school.programmers.co.kr/learn/courses/30/lessons/12901)
+- [x] [2016년](https://school.programmers.co.kr/learn/courses/30/lessons/12901)
