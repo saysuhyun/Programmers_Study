@@ -13,8 +13,8 @@ class Solution {
             int temp = a;
             a = b;
             b = temp;
-        }합
+        }
         return IntStream.rangeClosed(a, b).asLongStream().sum();
     }
-    
+
 }
