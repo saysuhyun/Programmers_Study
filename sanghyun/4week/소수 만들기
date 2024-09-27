@@ -1,0 +1,49 @@
+import java.util.*;
+
+
+// 소수 만들기
+public class Nums {
+    public static void main(String[] args){
+        int[] nums = {1,2,3,4};
+
+        List<Integer> list = new ArrayList<>();
+
+        // 조합 찾기
+        for(int i = 0; i  < nums.length; i++) {
+            int idx = i;
+            int now = nums[i];
+            for(int j = i + 1;  j < nums.length; j++) {
+                int next = nums[j];
+                for(int l = j + 1; l < nums.length; l++) {
+                    int last = nums[l];
+
+                    //System.out.println("now" + now + " next" + next + " last" + last);
+                    Integer sum = now + next + last;
+                   
+                    list.add(sum);
+                }
+            }
+        }
+
+        int retVal = 0;
+        for(Integer comb : list) {
+            //System.out.println(comb);
+            boolean isPrime = true;
+            for(int i = 1; i < Math.sqrt(comb) + 1 ; i++) {
+                if(i != 1) {
+                    //System.out.println(comb % i   + " "+ comb  + " " + Math.sqrt(comb));
+                    if(comb % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    //System.out.println(comb % i   + " "+ comb  + " " + Math.sqrt(comb));
+                }
+            }
+
+            //System.out.println("now "+ comb + " is prime? "  + isPrime);
+            if(isPrime) {
+                retVal++;
+            }
+        }
+    }
+}
