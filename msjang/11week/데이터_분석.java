@@ -1,6 +1,6 @@
 import java.util.*;
 
-class 데이터_분석 {
+public class 데이터_분석 {
     public static void main(String[] args) {
         Solution solution = new Solution();
         solution.solution(new int[][]{{1, 20300104, 100, 80},
